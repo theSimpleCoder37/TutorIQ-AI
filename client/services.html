@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            background-color: #FDFBF7;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="signup.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="text-center">Powerful AI Tools at Your Fingertips</h1>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Answer Maker</h3>
+                <p>Expert-level academic answers formatted for 1-mark university questions. Highly efficient and
+                    concise.</p>
+                <a href="login.html" class="btn btn-primary mt-1">Try Now</a>
+            </div>
+            <div class="card">
+                <h3>Exercise Maker</h3>
+                <p>Generate mock exam papers based on your specific university syllabus and topic requirements.</p>
+                <a href="login.html" class="btn btn-primary mt-1">Try Now</a>
+            </div>
+            <div class="card">
+                <h3>Learner Buddy</h3>
+                <p>A personal tutor that explains concepts in a 4-part journey: Why, What, How, and Mastering.</p>
+                <a href="login.html" class="btn btn-primary mt-1">Try Now</a>
+            </div>
+            <div class="card">
+                <h3>Problem Solver</h3>
+                <p>Get solving C++ or DBMS problems with code, dry runs, and optimization logic explained clearly.</p>
+                <a href="login.html" class="btn btn-primary mt-1">Try Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

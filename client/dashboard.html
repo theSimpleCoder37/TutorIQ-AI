@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            background-color: #FDFBF7;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="protected">
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="mt-2 text-center">
+            <h1 id="welcomeMessage">Welcome back, Smart Student!</h1>
+            <p>"Study Smart, Not Hard" — Let's get you ready for your exams.</p>
+            <div class="encouraging-text" style="font-style: italic; margin-top: 0.5rem; color: var(--primary);">
+                "Success is the sum of small efforts, repeated day in and day out."
+            </div>
+        </header>
+
+        <!-- Setup Progress Section -->
+        <div class="card mt-2" style="background-color: #fdfae6; border: 1px dashed var(--primary);">
+            <h3>🚀 Quick Start Guide</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div
+                        style="background: var(--primary); color: white; padding: 4px 10px; border-radius: 50%; font-weight: bold;">
+                        1</div>
+                    <div>
+                        <strong>Set up your Profile:</strong> Go to <a href="profile.html">Profile</a> and enter your
+                        University info. This helps the AI give you relevant answers.
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div
+                        style="background: var(--primary); color: white; padding: 4px 10px; border-radius: 50%; font-weight: bold;">
+                        2</div>
+                    <div>
+                        <strong>Add your API Key:</strong> You need a Google Gemini Key (it's free!). Paste it in your
+                        <a href="profile.html">Profile</a> to activate the tools.
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <div
+                        style="background: var(--primary); color: white; padding: 4px 10px; border-radius: 50%; font-weight: bold;">
+                        3</div>
+                    <div>
+                        <strong>Start Studying:</strong> Head over to <a href="tools.html">Tools</a> and pick a buddy to
+                        help you out!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-grid mt-2">
+            <div class="card">
+                <h3>Launch Tools</h3>
+                <p>Access Answer Maker, Learner Buddy, and more.</p>
+                <a href="tools.html" class="btn btn-primary mt-1">Open Tools</a>
+            </div>
+            <div class="card">
+                <h3>View History</h3>
+                <p>Re-examine your past chat sessions and queries.</p>
+                <a href="history.html" class="btn btn-primary mt-1">Go to History</a>
+            </div>
+            <div class="card">
+                <h3>Update Profile</h3>
+                <p>Set your university details and Gemini API Key.</p>
+                <a href="profile.html" class="btn btn-primary mt-1">Edit Profile</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

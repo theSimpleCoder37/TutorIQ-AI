@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body class="protected">
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html" class="active">Tools</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="tool-layout">
+            <!-- Sidebar for Tool Selection -->
+            <aside class="tool-sidebar">
+                <h3>Select Tool</h3>
+                <button class="btn btn-secondary tool-btn active" data-tool="answerMaker">Answer Maker</button>
+                <button class="btn btn-secondary tool-btn" data-tool="exerciseMaker">Exercise Maker</button>
+                <button class="btn btn-secondary tool-btn" data-tool="learnerBuddy">Learner Buddy</button>
+                <button class="btn btn-secondary tool-btn" data-tool="problemSolver">Problem Solver</button>
+                <hr>
+                <div id="toolDescription">
+                    <p id="descText">Get high-yield, exam-focused academic answers in seconds.</p>
+                </div>
+
+                <!-- Dynamic Config Panel -->
+                <div id="configPanel" class="tool-config-panel">
+                    <!-- Answer Maker Config -->
+                    <div id="config-answerMaker" class="config-section">
+                        <h4>Answer Params</h4>
+                        <div class="config-group">
+                            <label>Subject</label>
+                            <input type="text" id="ans-subject" placeholder="e.g. Data Structures">
+                        </div>
+                        <div class="config-group" style="margin-top: 0.5rem;">
+                            <label>Marks Weightage</label>
+                            <select id="ans-marks">
+                                <option value="1">1 Mark (Concise)</option>
+                                <option value="2">2 Marks (Brief)</option>
+                                <option value="5">5 Marks (Detailed)</option>
+                                <option value="10">10 Marks (Comprehensive)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Exercise Maker Config -->
+                    <div id="config-exerciseMaker" class="config-section hidden">
+                        <h4>Exercise Logic</h4>
+                        <div class="config-group">
+                            <label>Target Subject</label>
+                            <input type="text" id="exe-subject" placeholder="e.g. Operating Systems">
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <label style="font-size: 0.8rem; font-weight: bold; color: var(--primary);">Question
+                                Mix:</label>
+                            <div class="config-group"
+                                style="margin-top: 0.5rem; display: flex; flex-direction: row; align-items: center; gap: 0.5rem;">
+                                <input type="number" id="exe-short-qty" value="5" style="width: 50px;">
+                                <span>Short (2 Marks)</span>
+                            </div>
+                            <div class="config-group"
+                                style="margin-top: 0.5rem; display: flex; flex-direction: row; align-items: center; gap: 0.5rem;">
+                                <input type="number" id="exe-med-qty" value="3" style="width: 50px;">
+                                <span>Medium (5 Marks)</span>
+                            </div>
+                            <div class="config-group"
+                                style="margin-top: 0.5rem; display: flex; flex-direction: row; align-items: center; gap: 0.5rem;">
+                                <input type="number" id="exe-long-qty" value="1" style="width: 50px;">
+                                <span>Long (10 Marks)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generic for others (Learner Buddy, Problem Solver) -->
+                    <div id="config-generic" class="config-section hidden">
+                        <h4>Tool Settings</h4>
+                        <div class="config-group">
+                            <label>Context Subject</label>
+                            <input type="text" id="gen-subject" placeholder="e.g. C++ Programming">
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--secondary); margin-top: 0.5rem;">Providing a subject
+                            helps
+                            the AI be more accurate.</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Chat Area -->
+            <section class="tool-chat">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message message-assistant">
+                        Hello! I am your TutorIQ Assistant. Select a tool and ask me anything to start studying smart.
+                    </div>
+                </div>
+                <!-- Scroll to Bottom Button -->
+                <button id="scrollToBottom" class="scroll-bottom-btn" title="Scroll to bottom">
+                    <span style="font-size: 1.2rem;">↓</span>
+                </button>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your topic or question here..." required>
+                    <button id="sendBtn" class="btn btn-primary">Send</button>
+                </div>
+                <div class="encouraging-text">
+                    "Every expert was once a beginner. Keep pushing!" — TutorIQ
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            background-color: #FDFBF7;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="signup.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="card mt-2">
+            <h1>Our Mission: Study Smart, Not Hard</h1>
+            <p>TutorIQ was built for the smart student. We believe you shouldn't have to grind 10 hours a day to ace
+                your exams. Our AI tools deliver high-yield, exam-ready content in seconds—helping you understand
+                faster, remember longer, and study efficiently.</p>
+            <p class="mt-1">In today's fast-paced world, students are overwhelmed with information. TutorIQ filters
+                through the noise to provide exactly what you need to score maximum marks with minimum stress.</p>
+        </section>
+
+        <section class="mt-2 text-center">
+            <h2>Why Choose TutorIQ?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Efficiency</h4>
+                    <p>Instant answers and solutions so you don't waste time searching.</p>
+                </div>
+                <div class="card">
+                    <h4>Clarity</h4>
+                    <p>Simple language and real-life analogies for complex concepts.</p>
+                </div>
+                <div class="card">
+                    <h4>Result-Oriented</h4>
+                    <p>Everything is designed to help you perform better in your university exams.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

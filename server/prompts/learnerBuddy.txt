@@ -1,0 +1,32 @@
+Priority: Provide high-yield, exam-focused content. The user wants to study smart, not hard—so be concise, clear, and directly useful for scoring marks.
+Assume I am a beginner with no background in the subject. Adjust explanations accordingly.
+Teach the concept using the following four-part structure.
+In every part, include at least one real-life example or analogy from everyday life, work, hobbies, or anything simple and relatable.
+Whenever possible, connect the concept to things people commonly experience or know.
+Part 1: Why This Concept Exists
+The Problem: What was hard, confusing, or impossible before this idea?
+The Simple Story: Tell a real-life or everyday story that shows the "aha!" moment—how this idea solves the problem.
+Why It Matters: Summarize why this idea is important and what it helps us do now.
+Real-Life Example: Give a practical, everyday example.
+Mini-Challenge: Present a question or quick task, then immediately provide the answer and a clear explanation.
+Part 2: What This Concept Is
+Basic Truths: Explain the idea from the simplest possible starting points, as if talking to a child.
+How the Pieces Fit: Build up the explanation step-by-step, showing how the parts connect.
+Visual Aid: Use better ASCII drawings or mermaid code diagrams to help me picture it.
+Explain Terms: Introduce any technical words only after the idea is clear, with simple definitions or analogies.
+Hands-On Activity: Present a small task, code, or thought experiment, then immediately provide the answer and explanation.
+Part 3: How It Works in Real Life
+Examples: Give 2 or 3 easy-to-understand examples where this concept is used, from daily life, work, or hobbies.
+Step-by-Step Walkthrough: Pick one example and explain how the concept works there, step-by-step.
+Hands-On Practice: Provide a simple, clean, and well-commented C++ or PostgreSQL code (if programming is involved), or a real-life task, then immediately provide the answer and explanation.
+Connect to Everyday Life: Relate the concept to something most people experience.
+Mini-Challenge: Present a question or task, then immediately provide the answer and explanation.
+Part 4: Mastering the Concept
+Interview Questions: List 3–5 common questions people ask about this concept. For each, give a short, clear, smart answer using simple analogies or explanations, with real-life references if possible.
+Fun Project: Suggest a simple, hands-on project or thought experiment to practice and understand this concept better, using a real-life theme if possible, and provide a sample solution or approach.
+Summary: Summarize the concept in plain language and reflect on how it might be used in daily life or studies.
+Before starting, use your most up-to-date knowledge and reference the top 5 best and most relevant web resources about this concept to give the most accurate and current explanation. Do not list or summarize the sites; simply use them as references for your teaching.
+If the concept involves programming, be sure to use C++ or [PostgreSQL program (if DBMS)] for all code examples, and include helpful comments to explain each step clearly.
+After Part 4, list 2–3 common mistakes or misconceptions about this concept, and how to avoid them.
+Briefly mention 2–3 related concepts and how they connect to this one.
+INSTRUCTION: Generate ALL Parts (1 through 4) in a SINGLE continuous response. Do NOT wait for user confirmation between parts.

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TutorIQ — AI Powered Learning System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Critical CSS to prevent FOUC */
+    body {
+      background-color: #FDFBF7;
+      opacity: 0;
+      transition: opacity 0.2s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">TutorIQ</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>For students who want <br> <span style="color:var(--primary)">maximum marks</span> with minimum stress.</h1>
+      <p>AI-powered answers, exam-focused practice, and instant clarity—so you spend less time studying and more time
+        living.</p>
+      <div class="mt-2">
+        <a href="signup.html" class="btn btn-primary">Join TutorIQ Now</a>
+        <a href="#features" class="btn btn-secondary">Explore Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="how-it-works"
+    style="background: var(--surface); padding: 4rem 1rem; margin-top: 4rem; border-radius: var(--radius-lg);">
+    <div class="container">
+      <h2 class="text-center">How to Get Started in 3 Steps</h2>
+      <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="text-center">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">📝</div>
+          <h4>1. Register</h4>
+          <p>Create your free account and tell us what you're studying.</p>
+        </div>
+        <div class="text-center">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🔑</div>
+          <h4>2. Add API Key</h4>
+          <p>Get a free Gemini API key from Google and save it in your profile.</p>
+        </div>
+        <div class="text-center">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
+          <h4>3. Study Smart</h4>
+          <p>Access our 4 AI tools and start mastering your subjects in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="container">
+    <h2 class="text-center">Study Smart, Not Hard</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Answer Maker</h3>
+        <p>Get high-yield, exam-focused academic answers in seconds. Perfect for quick learning.</p>
+      </div>
+      <div class="card">
+        <h3>Exercise Maker</h3>
+        <p>Generate practice questions tailored to your university and course pattern.</p>
+      </div>
+      <div class="card">
+        <h3>Learner Buddy</h3>
+        <p>Deep dive into any concept with a 4-part structured explanation and real-life analogies.</p>
+      </div>
+      <div class="card">
+        <h3>Problem Solver</h3>
+        <p>Step-by-step C++ & DBMS problem solving with the expert's thought process explained.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with Love For Students By Rehan Sayyed</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

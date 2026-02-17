@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study History — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            background-color: #FDFBF7;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body class="protected">
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="history.html" class="active">History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1>Your Study History</h1>
+                <p>Everything you've learned so far.</p>
+            </div>
+            <button id="clearAllBtn" class="btn btn-secondary" style="color: #D32F2F; border-color: #D32F2F;">Clear All
+                History</button>
+        </div>
+
+        <div class="card mt-2 hidden" id="chatDetailContainer">
+            <button class="btn btn-secondary btn-sm" id="backToHistory">← Back to List</button>
+            <h3 id="detailTitle" class="mt-1">Conversation Details</h3>
+            <div id="detailMessages" class="chat-messages"
+                style="background: var(--background); border-radius: 12px; margin-top: 1rem; max-height: 500px;">
+                <!-- Messages will load here -->
+            </div>
+        </div>
+
+        <div id="historyList" class="card-grid mt-2">
+            <!-- History cards will load here -->
+            <div class="text-center">Loading history...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile — TutorIQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            background-color: #FDFBF7;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="protected">
+    <nav>
+        <div class="logo">TutorIQ</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-container" style="max-width: 600px;">
+            <h2>User Profile</h2>
+            <p>Customize your experience to get better AI results.</p>
+
+            <form id="profileForm" class="mt-2">
+                <div class="form-group">
+                    <label>University Name</label>
+                    <input type="text" id="university" placeholder="e.g., SPPU, Mumbai University">
+                </div>
+                <div class="form-group">
+                    <label>Semester</label>
+                    <input type="text" id="semester" placeholder="e.g., 5th Sem, Final Year">
+                </div>
+                <div class="form-group">
+                    <label>Course / Program</label>
+                    <input type="text" id="course" placeholder="e.g., BSc CS, BE IT">
+                </div>
+                <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--outline);">
+                <div class="form-group">
+                    <label style="color: var(--primary);">
+                        Google Gemini API Key
+                        <span id="keyStatus" class="key-status-badge"></span>
+                    </label>
+                    <input type="password" id="gemini_api_key" placeholder="Enter your API key here"
+                        autocomplete="new-password" spellcheck="false">
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Your key is stored securely. Get one from <a
+                            href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.</p>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%">Save Changes</button>
+            </form>
+            <div id="message" class="text-center mt-1"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love For Students By Rehan Sayyed</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
